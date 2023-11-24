@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link style="width: 16px; height: 16px;" rel="shortcut icon"
+        href="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699125287/store/agqskmtew2mxkysriqup.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style_privacy.css' %}">
+    <title>Soporte Técnico</title>
+</head>
+
+<body>
+
+    <!-- INICIO DE NAVBAR -->
+    <header class="navbar-login">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699135976/store/x2nha41fgpivxmleddsg.svg"
+                    alt="" width="50px" height="100%">
+                <span
+                    style="color: #0cf; font-family: 'Agbalumo'; text-shadow: 0.3px 0.3px 0.3px #fff; min-height: 10px;">FunStore</span>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Inicio</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#"> -None-</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}"> Contacto</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-9 pt-4 bg-white">
+                <h4 class="tittle-1">Política de privacidad</h4>
+                <h4 class="subheading">Bienvenido a nuestras políticas de privacidad</h4>
+                <div class="container p-4 text-muted">En nuestra página web, nos tomamos muy en serio la privacidad de
+                    nuestros
+                    usuarios. Esta política de
+                    privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que
+                    recopilamos de los
+                    usuarios de nuestra página web.
+                </div>
+                <div class="p-4 text-privacy">
+                    <ol>
+                        <li>
+                            Información que recopilamos
+                            <p class="text-muted">
+                                Recopilamos información personal de los usuarios cuando se registran en nuestra página
+                                web, realizan
+                                una
+                                compra o se suscriben a nuestro boletín informativo. La información que recopilamos
+                                puede incluir su
+                                nombre,
+                                dirección de correo electrónico, dirección postal, número de teléfono, información de
+                                pago y otra
+                                información relevante.
+                                Además, podemos recopilar información no personal, como su dirección IP, el tipo de
+                                navegador que
+                                está
+                                utilizando, el nombre de dominio de su proveedor de servicios de Internet y otros datos
+                                de uso
+                                similares.</p>
+                        </li>
+                        <li>
+                            Propiedad intelectual
+                            <p class="text-muted">
+                                Todos los contenidos de nuestra página web, incluyendo, entre otros,
+                                texto, gráficos, logotipos,
+                                iconos,
+                                imágenes, audio y software, son propiedad exclusiva de nuestra empresa o de nuestros
+                                socios
+                                y
+                                están
+                                protegidos
+                                por las leyes de propiedad intelectual aplicables.</p>
+
+                        </li>
+                        <li>
+                            Uso de la información
+                            <p class="text-muted">
+                                Utilizamos la información que recopilamos para procesar pedidos, responder a consultas,
+                                enviar
+                                boletines
+                                informativos, mejorar nuestros productos y servicios, y personalizar la experiencia del
+                                usuario en
+                                nuestra
+                                página web.
+
+                                También podemos utilizar la información para fines de marketing, como enviar correos
+                                electrónicos
+                                promocionales o publicidad dirigida a usuarios específicos que pueden estar interesados
+                                en nuestros
+                                productos o servicios.</p>
+
+                        </li>
+                        <li>
+                            Compartir información
+                            <p class="text-muted">
+                                No vendemos ni compartimos la información personal de nuestros usuarios con terceros,
+                                excepto en las
+                                circunstancias limitadas descritas a continuación:
+                            <ul>
+                                <li>
+                                    <p class="text-muted">Podemos compartir información con nuestros proveedores de
+                                        servicios, como
+                                        proveedores de
+                                        servicios
+                                        de pago y
+                                        servicios de envío, para procesar pedidos y enviar correos electrónicos.</p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">Podemos compartir información con empresas que trabajan con
+                                        nosotros en campañas de
+                                        marketing
+                                        conjuntas o
+                                        para ofrecer promociones conjuntas.</p>
+
+                                </li>
+                                <li>
+                                    <p class="text-muted">Podemos compartir información en respuesta a una citación,
+                                        orden judicial u otra
+                                        demanda
+                                        legal.</p>
+
+                                </li>
+                            </ul>
+                            </p>
+
+                        </li>
+                        <li>
+                            Protección de la información
+                            <p class="text-muted">
+                                Nos comprometemos a proteger la información personal de nuestros usuarios. Utilizamos
+                                medidas de
+                                seguridad
+                                razonables para proteger la información contra el acceso no autorizado o la divulgación.
+                            </p>
+
+                        </li>
+                        <li>
+                            Cookies
+                            <p class="text-muted">
+                                Utilizamos cookies en nuestra página web para mejorar la experiencia del usuario y
+                                personalizar el
+                                contenido
+                                y la publicidad. Puede optar por desactivar las cookies en la configuración de su
+                                navegador, pero
+                                tenga en
+                                cuenta que esto puede afectar la funcionalidad de la página web.
+                            </p>
+
+                        </li>
+                        <li>
+                            Enlaces a otros sitios web
+                            <p class="text-muted">
+                                Nuestra página web puede contener enlaces a sitios web de terceros. No somos
+                                responsables de las
+                                prácticas
+                                de privacidad o los contenidos de estos sitios web de terceros.
+                            </p>
+
+                        </li>
+                        <li>
+                            Cambios a la política de privacidad
+                            <p class="text-muted">
+                                Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento
+                                y sin previo
+                                aviso.
+                                Al continuar utilizando nuestra página web después de cualquier modificación, usted
+                                acepta cumplir
+                                con la
+                                política de privacidad modificada.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <div>
+        <p class="txtQuery text-center p-5">Si tiene alguna pregunta o comentario sobre estos términos y
+            condiciones, no dude
+            en contactarnos.</p>
+        <div class="text-muted text-center p-4">
+            Fecha de entrada en vigor: 11/03/2023
+        </div>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            direction: ltr;
+            line-height: 1.4286;
+            margin: 0;
+            padding: 0;
+            background: #000000;
+            color: #a7a7a7;
+        }
+
+        .navbar {
+            min-height: 10px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #navbar {
+            background: white;
+            position: sticky;
+            z-index: 10;
+            top: 0;
+        }
+
+        #navbarSupportedContent li a {
+            color: black !important;
+            text-shadow: 0px 1px 0px #333;
+        }
+
+        .col-9 {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            /* padding: 10%; */
+            border-radius: 15px;
+        }
+
+        .tittle-1 {
+            font-weight: bold;
+            font-size: 30px;
+            color: black;
+            text-align: center;
+        }
+
+        .subheading {
+            color: #3931af;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .text-privacy li {
+            font-weight: bold;
+            font-size: 20px;
+            color: black;
+        }
+
+        .text-muted {
+            font-weight: 400;
+            font-size: 16px;
+            --bs-text-opacity: 1;
+            color: #646464 !important;
+        }
+
+        .text-privacy a {
+            text-decoration: none;
+        }
+
+        .txtQuery {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- Script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/276d470984.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

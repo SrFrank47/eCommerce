@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link style="width: 16px; height: 16px;" rel="shortcut icon"
+        href="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699125287/store/agqskmtew2mxkysriqup.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style_terms.css' %}">
+    <title>Soporte Técnico</title>
+</head>
+
+<body>
+
+    <!-- INICIO DE NAVBAR -->
+    <header class="navbar-login">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699135976/store/x2nha41fgpivxmleddsg.svg"
+                    alt="" width="50px" height="100%">
+                <span
+                    style="color: #0cf; font-family: 'Agbalumo'; text-shadow: 0.3px 0.3px 0.3px #fff; min-height: 10px;">FunStore</span>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Inicio</a>
+                        </li>
+                       <!--  <li class="nav-item">
+                            <a class="nav-link" href="#"> -None-</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}"> Contacto</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-9 pt-4 bg-white">
+                <h4 class="tittle-1">Términos y Condiciones</h4>
+                <h4 class="subheading">Bienvenido a nuestra página web</h4>
+                <div class="container p-4 text-muted">Al acceder a nuestro sitio web, usted acepta cumplir con estos
+                    términos y
+                    condiciones de uso, así como con todas las leyes y regulaciones aplicables. Si no estás de acuerdo
+                    con
+                    estos términos y condiciones, por favor, no utilices nuestro sitio web.
+                </div>
+                <div class="p-4 text-terms">
+                    <ol>
+                        <li>
+                            Uso de la página web
+                            <p class="text-muted">
+                                El uso de nuestra página web está destinado solo para fines legales y autorizados. No
+                                puede
+                                utilizar
+                                nuestra
+                                página web para ningún otro propósito que no sea el previsto por nosotros. No puede
+                                utilizar
+                                nuestra
+                                página web
+                                de ninguna manera que pueda dañar, desactivar, sobrecargar o deteriorar la página web o
+                                interferir
+                                con
+                                el uso de
+                                la página web por parte de otros usuarios.</p>
+                        </li>
+                        <li>
+                            Propiedad intelectual
+                            <p class="text-muted">
+                                Todos los contenidos de nuestra página web, incluyendo, entre otros,
+                                texto, gráficos, logotipos,
+                                iconos,
+                                imágenes, audio y software, son propiedad exclusiva de nuestra empresa o de nuestros
+                                socios
+                                y
+                                están
+                                protegidos
+                                por las leyes de propiedad intelectual aplicables.</p>
+
+                        </li>
+                        <li>
+                            Enlaces a otros sitios web
+                            <p class="text-muted">
+                                Nuestra página web puede contener enlaces a sitios web de terceros. Estos
+                                enlaces se
+                                proporcionan
+                                solo
+                                como
+                                conveniencia para nuestros usuarios y no implican que respaldamos o somos responsables
+                                de
+                                los
+                                contenidos
+                                de esos
+                                sitios web.</p>
+
+                        </li>
+                        <li>
+                            Limitación de responsabilidad
+                            <p class="text-muted">
+                                En ningún caso seremos responsables ante usted o cualquier otra parte por cualquier daño
+                                directo,
+                                indirecto,
+                                incidental, especial o consecuente que surja del uso o la imposibilidad de uso de
+                                nuestra
+                                página
+                                web.</p>
+
+                        </li>
+                        <li>
+                            Modificaciones a los términos y condiciones
+                            <p class="text-muted">
+                                Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento
+                                y
+                                sin
+                                previo
+                                aviso. Al
+                                continuar utilizando nuestra página web después de cualquier modificación, usted acepta
+                                cumplir
+                                con
+                                los
+                                términos
+                                y condiciones modificados.</p>
+
+                        </li>
+                        <li>
+                            Ley aplicable y jurisdicción
+                            <p class="text-muted">
+                                Estos términos y condiciones se regirán e interpretarán de acuerdo con las leyes del
+                                país de
+                                origen
+                                de
+                                nuestra
+                                empresa. Cualquier disputa que surja en relación con estos términos y condiciones se
+                                resolverá
+                                exclusivamente en
+                                los tribunales competentes del país de origen de nuestra empresa.
+                            </p>
+
+                        </li>
+                        <li>
+                            Política de privacidad
+                            <p class="text-muted">
+                                Por favor, consulte nuestra <a href="{% url 'privacy' %}">política de privacidad</a>
+                                para
+                                obtener información sobre cómo
+                                recopilamos y
+                                utilizamos
+                                la información personal de nuestros usuarios.
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <div>
+        <p class="txtQuery text-center p-5">Si tiene alguna pregunta o comentario sobre estos términos y
+            condiciones, no dude
+            en contactarnos.</p>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            direction: ltr;
+            line-height: 1.4286;
+            margin: 0;
+            padding: 0;
+            background: #000000;
+            color: #a7a7a7;
+        }
+
+        .navbar {
+            min-height: 10px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #navbar {
+            background: white;
+            position: sticky;
+            z-index: 10;
+            top: 0;
+        }
+
+        #navbarSupportedContent li a {
+            color: black !important;
+            text-shadow: 0px 1px 0px #333;
+        }
+
+        .col-9 {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            /* padding: 10%; */
+            border-radius: 15px;
+
+        }
+
+        .tittle-1 {
+            font-weight: bold;
+            font-size: 30px;
+            color: black;
+            text-align: center;
+        }
+
+        .subheading {
+            color: #3931af;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .text-terms li {
+            font-weight: bold;
+            font-size: 20px;
+            color: black;
+        }
+
+        .text-muted {
+            font-weight: 400;
+            font-size: 16px;
+            --bs-text-opacity: 1;
+            color: #646464 !important;
+        }
+
+        .text-terms a {
+            text-decoration: none;
+        }
+
+        .txtQuery {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- Script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/276d470984.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

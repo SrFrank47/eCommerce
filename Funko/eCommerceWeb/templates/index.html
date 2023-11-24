@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link style="width: 16px; height: 16px;" rel="shortcut icon"
+        href="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699125287/store/agqskmtew2mxkysriqup.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <title>Inicio</title>
+
+    <!-- INICIO DE NAVBAR -->
+    <div class="slider-container">
+        <div class="slider">
+            <p class="slide text-center">
+                <span style="color: #0cf; ">ENVÍO GRATIS</span> EN COMPRAS SOBRE $29.990 - DESDE 7 DÍAS HÁBILES
+            </p>
+        </div>
+    </div>
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699135976/store/x2nha41fgpivxmleddsg.svg"
+                alt="" width="50px" height="100%">
+            <span
+                style="color: #0cf; font-family: 'Agbalumo'; text-shadow: 0.3px 0.3px 0.3px #fff; min-height: 10px;">FunStore</span>
+            <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sede</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li> -->
+                </ul>
+                <button class="btn-signUp" id="loginButton">Iniciar Sesión</button>
+
+                <div id="loginPopup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" id="closeButton">&times;</span>
+                        <h2>Inicia Sesión</h2>
+                        <form class="form-sign" method="POST">
+                            {% csrf_token %}
+                            <div class="input-box">
+                                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                <input type="email" name="email" autofocus="" autocapitalize="none" autocomplete="email"
+                                    maxlength="150" required="" id="id_email" control-id="ControlID-1"
+                                    placeholder="Correo electrónico">
+                                <label for="id_email"></label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                                <input type="password" name="password" autocomplete="current-password" required=""
+                                    id="id_password" control-id="ControlID-2" placeholder="Contraseña">
+                                <label for="id_password"></label>
+                            </div>
+                            <input type="hidden" name="csrfmiddlewaretoken"
+                                value="GAqa7YNLGhKjbiEFIsIhRbTt3klZdGJLcmMVpmCeukuYWZPWBwwesxsswKngWxX2"
+                                control-id="ControlID-3">
+                            <div class="remember-forgot">
+                                <label><input type="checkbox">Recuérdame</label>
+                                <a href="#">¿Olvidaste la contraseña?</a>
+                            </div>
+                            <button type="submit" class="btn-login">Iniciar sesión</button>
+                            <div class="login-register">
+                                <p>No tienes cuenta? <a href="#" class="register-link"><b>Regístrese</b></a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="content-center">
+                    <div class="wrapper">
+                        <a href="{% url 'home' %}">
+                            <span class="icon-close">
+                                <ion-icon name="close"></ion-icon>
+                            </span>
+                        </a>
+                        <div class="form-box login">
+                            <h2>Inicia Sesión</h2>
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                    <input type="email" name="email" autofocus="" autocapitalize="none"
+                                        autocomplete="email" maxlength="150" required="" id="id_email"
+                                        control-id="ControlID-1" placeholder="Correo electrónico">
+                                    <label for="id_email"></label>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                                    <input type="password" name="password" autocomplete="current-password" required=""
+                                        id="id_password" control-id="ControlID-2" placeholder="Contraseña">
+                                    <label for="id_password"></label>
+                                </div>
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                    value="GAqa7YNLGhKjbiEFIsIhRbTt3klZdGJLcmMVpmCeukuYWZPWBwwesxsswKngWxX2"
+                                    control-id="ControlID-3">
+                                <div class="remember-forgot">
+                                    <label><input type="checkbox">Recuérdame</label>
+                                    <a href="#">¿Olvidaste la contraseña?</a>
+                                </div>
+                                <button type="submit" class="btn-login">Iniciar sesión</button>
+                                <div class="login-register">
+                                    <p>No tienes cuenta? <a href="#" class="register-link"><b>Regístrese</b></a></p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="form-box register">
+                            <h2>Regístrate</h2>
+                            <form method="">
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                                    <input type="text" autocomplete="username" required placeholder="Nombre de Usuario">
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                    <input type="email" autocomplete="email" required placeholder="Correo electrónico">
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                                    <input type="password" required placeholder="Contraseña">
+                                </div>
+                                <div class="remember-forgot">
+                                    <label><input type="checkbox">He leído y acepto los términos y condiciones</label>
+                                </div>
+                                <button type="submit" class="btn-login">Crear Cuenta</button>
+                                <div class="login-register">
+                                    <p>Ya tienes una cuenta? <a href="#" class="login-link"><b>Inicia Sesión</b></a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+
+    </nav>
+
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Funko 1</span>
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699133526/store/cp0hf7i0oy6l0tehtljc.jpg"
+                    alt="" class="img-item">
+                <span class="precio-item">$15.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Funko 2</span>
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699133526/store/cp0hf7i0oy6l0tehtljc.jpg"
+                    alt="" class="img-item">
+                <span class="precio-item">$25.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Funko 3</span>
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699133526/store/cp0hf7i0oy6l0tehtljc.jpg"
+                    alt="" class="img-item">
+                <span class="precio-item">$35.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Funko 4</span>
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699133526/store/cp0hf7i0oy6l0tehtljc.jpg"
+                    alt="" class="img-item">
+                <span class="precio-item">$18.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Funko 5</span>
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699133526/store/cp0hf7i0oy6l0tehtljc.jpg"
+                    alt="" class="img-item">
+                <span class="precio-item">$32.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Funko 6</span>
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699133526/store/cp0hf7i0oy6l0tehtljc.jpg"
+                    alt="" class="img-item">
+                <span class="precio-item">$18.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Funko 7</span>
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699133526/store/cp0hf7i0oy6l0tehtljc.jpg"
+                    alt="" class="img-item">
+                <span class="precio-item">$54.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Funko 8</span>
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699133526/store/cp0hf7i0oy6l0tehtljc.jpg"
+                    alt="" class="img-item">
+                <span class="precio-item">$32.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Funko 9</span>
+                <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699133526/store/cp0hf7i0oy6l0tehtljc.jpg"
+                    alt="" class="img-item">
+                <span class="precio-item">$42.800</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra lateral de filtrado -->
+    <!-- <div class="sidebar">
+        <h2>Filtrar por Precio</h2>
+        <label for="min-price">Precio mínimo:</label>
+        <input type="number" id="min-price" min="0">
+        <label for="max-price">Precio máximo:</label>
+        <input type="number" id="max-price" min="0">
+        <button onclick="filtrarProductos()">Filtrar</button>
+    </div> -->
+
+    <!-- Contenedor de productos -->
+    <div class="contenedor">
+        <div class="contenedor-items">
+            <!-- Aquí van los productos -->
+        </div>
+    </div>
+
+    <!-- INICIO FOOTER -->
+    <footer class="footer">
+        <div class="container py-5">
+            <div class="row py-4">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
+                    <img src="https://res.cloudinary.com/dwqfvkoq7/image/upload/v1699124648/store/zqf0bqsyqelra0zgrshz.svg"
+                        alt="" width="135" class="mb-3">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href=""><i class="twitter fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href=""><i class="facebook fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href=""><i class="instagram fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a
+                                href="https://wa.me/56947069987?text=Hola,%20Necesito%20de%20su%20ayuda%20!"><i
+                                    class="whatsapp fa fa-whatsapp"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.youtube.com/@srfrank"><i
+                                    class="youtube fa fa-youtube-play"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 ">
+                    <h6 class="text-uppercase font-weight-bold mb-4">Conócenos</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="{% url 'about_company' %}" class="text-li">Sobre FunStore</a></li>
+                        <li class="mb-2"><a href="{% url 'about_me' %}" class="text-li">Promociones</a></li>
+                        <li class="mb-2"><a href="#" class="text-li">Únete a nuestro equipo</a></li>
+                        <!-- <li class="mb-2"><a href="#" class="text-li"> -None-</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase font-weight-bold mb-4">Soporte</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="{% url 'terms' %}" class="text-li">Términos y condiciones</a></li>
+                        <li class="mb-2"><a href="{% url 'privacy' %}" class="text-li">Política de privacidad</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-li">Política de Entrega</a></li>
+                        <li class="mb-2"><a href="{% url 'contact' %}" class="text-li">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-lg-0">
+                    <h6 class="text-uppercase font-weight-bold mb-4">Mantente al día</h6>
+                    <p class="text-p mb-4">Suscríbete a nuestro boletín informativo 😉.</p>
+
+                    <div class="p-1 input-group">
+                        <form action="" class="newsletter">
+                            <input type="email" name="" id="" placeholder="Escribe tu email">
+                            <input type="submit" value="Únete">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyrights -->
+        <div class="py-4 p-footer">
+            <div class="container text-center">
+                <p class="text-footer mb-0 py-2">© 2023 GnoxStudio All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!-- FIN FOOTER -->
+</head>
+
+<body>
+
+    <!-- Script -->
+    <script src="https://kit.fontawesome.com/276d470984.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/276d470984.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>
